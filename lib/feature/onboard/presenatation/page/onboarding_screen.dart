@@ -1,4 +1,5 @@
 import 'package:bharat_lyak/core/constant/image/app_image.dart';
+import 'package:bharat_lyak/feature/login/presenatation/page/login_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/text_style/app_text_style.dart';
@@ -41,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void nextPage() {
     if (currentIndex == contents.length - 1) {
-      // Navigate to home
+      Navigator.push(context, MaterialPageRoute(builder:(context)=>LoginPage()));
     } else {
       _controller.nextPage(
         duration: const Duration(milliseconds: 300),
@@ -52,6 +53,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void skip() {
     _controller.jumpToPage(contents.length - 1);
+    Navigator.push(context, MaterialPageRoute(builder:(context)=>LoginPage()));
   }
 
   @override
