@@ -1,3 +1,4 @@
+import 'package:bharat_lyak/core/widget/button/app_button.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/constant/text_style/app_text_style.dart';
 import 'onboarding_content.dart';
@@ -53,23 +54,7 @@ class OnboardingPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: next,
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                    child: Text(
-                      "Continue",
-                      style: AppTextStyles.bodyMedium(color: Colors.white),
-                    ),
-                  ),
-                ),
+                AppButton(onPressed:next, buttonText: "Continue")
               ],
             ),
           ),
